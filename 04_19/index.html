@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        textarea {
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <label for="txtNombre">Nombre:</label> <br>
+        <input type="text" name="txtNombre" id="txtNombre" maxlength="5" minlength="5"
+            placeholder="Ingresa tu nombre aquí" required><br>
+        <label for="txtEdad">Edad:</label><br>
+        <input type="number" name="txtEdad" id="txtEdad" max="10" value="10"><br>
+        <label for="txtFechaNacimiento">Fecha Nacimiento:</label> <br>
+        <input type="date" name="txtFechaNacimiento" id="txtFechaNacimiento">
+        <br>
+        <label for="txtFechaCitaMedica">Fecha y Hora Cita Medica:</label> <br>
+        <input type="datetime-local" name="txtFechaCitaMedica" id="txtFechaCitaMedica">
+        <br>
+        <label for="txtClave">Contraseña:</label> <br>
+        <input type="password" name="txtClave" id="txtClave" maxlength="4" required>
+        <br>
+        <label for="txtCorreo">Correo:</label> <br>
+        <input type="email" name="txtCorreo" id="txtCorreo">
+        <br>
+        <label for="txtCorreo">Confirma tu correo electronico:</label> <br>
+        <input type="email" name="txtCorreo" id="txtCorreo">
+        <br>
+        <label for="txtComentario">Ingrese su comentario:</label> <br>
+        <textarea name="txtComentario" id="txtComentario" cols="30" rows="10" readonly>Valor por defecto</textarea>
+        <br>
+        <label for="txtComentario">Ingrese su reclamo:</label> <br>
+        <textarea name="txtComentario" id="txtComentario" cols="30" rows="10" disabled></textarea>
+        <br>
+        <br>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+
+</html>
