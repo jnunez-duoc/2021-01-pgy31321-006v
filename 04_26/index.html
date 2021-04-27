@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/nan.js"></script>
+    <script>
+        var variable_2 = "20"
+        var suma = variable_2 + 20
+        if (variable_2 == 20)
+            console.log('Variable_2 es 20')
+
+        if (variable_2 === 20)
+            console.log('Variable_2 es 20 y es integer.')
+
+        function suma_dos_valores(valor_1, valor_2) {
+            return valor_1 + valor_2;
+        }
+
+        function multiplicar_valor_por_10(valor_1) {
+            return valor_1 * 10
+        }
+
+        var resultado_suma = suma_dos_valores(30, 40)
+        console.log('Resultado de la suma ' + resultado_suma)
+        var resultado_multiplicar_por_10 = multiplicar_valor_por_10(resultado_suma)
+        console.log('Resultado de la multiplicación por 10 es: ' + resultado_multiplicar_por_10)
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
