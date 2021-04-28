@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("form[name='formularioContacto']").validate({
+                errorElement: 'span',
+                errorPlacement: function (error, element) {
+                    error.addClass('invalid-feedback');
+                    element.closest('.form-group').append(error);
+                },
+                highlight: function (element, errorClass, validClass) {
+                    $(element).addClass('is-invalid');
+                },
+                unhighlight: function (element, errorClass, validClass) {
+                    $(element).removeClass('is-invalid');
+                },
+                rules: {
+                    txtNombres: {
+                        required: true,
+                        minlength: 2
+                    }
+                },
+                messages: {
+                    txtNombres: {
+                        required: 'El campo de nombres es requerido',
+                        minlength: 'El campo de nombres debe tener al menos 2 caracteres'
+                    }
+                }
+            });
+        })
+    </script>
+</head>
+
+<body>
+
+</body>
+<div class="container mt-5">
+    <h1>Formulario de Contacto</h1>
+    <form action="" name="formularioContacto" id="formularioContacto">
+        <div class="form-group">
+            <label for="txtNombres">Nombre Completo</label>
+            <input type="text" class="form-control" id="txtNombres" name="txtNombres" aria-describedby="ayudaNombres">
+            <small id="ayudaNombres" class="form-text text-muted">Escribe tu nombre completo.</small>
+        </div>
+
+        <div class="form-group">
+            <label for="txtEmail">Correo Electronico</label>
+            <input type="email" class="form-control" id="txtEmail" aria-describedby="ayudaCorreo">
+            <small id="ayudaCorreo" class="form-text text-muted">Escribe tu correo electronico con @.</small>
+        </div>
+        <div class="form-group">
+            <label for="txtPassword">Contraseña</label>
+            <input type="password" class="form-control" id="txtPassword">
+        </div>
+        <div class="form-group">
+            <label for="txtFechaNacimiento">Fecha Nacimiento:</label>
+            <input type="date" name="txtFechaNacimiento" id="txtFechaNacimiento" class="form-control" max="2021-04-23">
+        </div>
+        <div class="form-group">
+            <label for="txtComentario">Ingrese su comentario:</label> <br>
+            <textarea name="txtComentario" id="txtComentario" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="selectComuna">Comuna:</label> <br>
+            <select name="selectComuna" id="selectComuna" class="form-control">
+                <option value="" selected disabled>Seleccione una opción</option>
+                <option value="Santiago">Santiago</option>
+                <option value="Maipu">Maipu</option>
+            </select>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">¿Ha tenido fiebre en los ultimos 5
+                dias? </label>
+        </div>
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">¿Ha tenido fiebre en los ultimos 5
+                dias? </label>
+        </div>
+        <input type="submit" class="btn btn-primary" id="btnEnviar" value="Enviar"></input>
+    </form>
+</div>
+
+</html>
